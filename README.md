@@ -66,15 +66,28 @@ Each model is trained and evaluated using the same dataset to ensure a fair comp
 
 ## Repository Structure  
 ```
-RhythmiQ/
+RhythmiQ-Music-Genre-Classification/
 │
-├── data/                   # Audio files and extracted features
-├── models/                 # Saved model weights and architectures
-├── notebooks/              # Jupyter notebooks for experimentation
-├── utils/                  # Helper scripts for preprocessing, training, etc.
-├── results/                # Visualizations and performance reports
-├── README.md               # This file
-└── requirements.txt        # Dependencies
+├── Classifier_Models/                  # Notebooks for various classification models
+│   ├── Music_Genre_ClassificationRes_Gated_CNN.ipynb
+│   ├── Music_Genre_Classification_CNN.ipynb
+│   ├── Music_Genre_Classification_CNN_Refined.ipynb
+│   ├── Music_Genre_Classification_LSTM.ipynb
+│   ├── Music_Genre_Classification_LSTM_+_SVM.ipynb
+│   └── Music_Genre_Classification_SVM.ipynb
+│
+├── Feature_Extraction/                # Extracted audio features
+│   ├── features_3_sec.csv
+│   └── features_30_sec.csv
+│
+├── Research_Papers/                   # Reference and research materials
+│   ├── LSTM_AND_SVM_reseach_paper.pdf
+│   ├── Res_gated_cnn_research_paper.pdf
+│   ├── cnn_research_paper.pdf
+│   └── res_gated_cnn_image.png
+│
+├── LICENSE                            # License for the project
+└── README.md                          # Project overview and usage instructions
 ```
 
 ## Getting Started
@@ -108,5 +121,8 @@ pip install -r requirements.txt
 ## Contributors  
 - Anshit Agarwal  
 - Kaustubh Salodkar
+
+## License  
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
