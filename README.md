@@ -122,4 +122,7 @@ pip install -r requirements.txt
 - Anshit Agarwal  
 - Kaustubh Salodkar
 
+## License  
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ---
