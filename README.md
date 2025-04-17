@@ -25,10 +25,61 @@ Each original audio file is 30 seconds long. To enhance data diversity and impro
 - **Total: 10,000 audio clips**  
 - Features: **Mel Spectrograms**
 
-## Feature Extraction  
-- Audio is downsampled and segmented to 3-second clips.  
-- **Mel Spectrograms** are extracted from each clip using `librosa`.  
-- These are used as input features for model training.
+Feature Extraction
+Each 3-second audio clip is transformed into a 55-dimensional feature vector comprising:
+
+Chroma Short-Time Fourier Transform (STFT):
+
+chroma_stft_mean
+
+chroma_stft_var
+
+Spectral Centroid:
+
+spectral_centroid_mean
+
+spectral_centroid_var
+
+Spectral Bandwidth:
+
+spectral_bandwidth_mean
+
+spectral_bandwidth_var
+
+Spectral Rolloff:
+
+rolloff_mean
+
+rolloff_var
+
+Zero Crossing Rate:
+
+zero_crossing_rate_mean
+
+zero_crossing_rate_var
+
+Harmonic Content:
+
+harmony_mean
+
+harmony_var
+
+Perceptual Spread:
+
+perceptr_mean
+
+perceptr_var
+
+Tempo
+
+MFCCs (Mel-Frequency Cepstral Coefficients):
+
+20 MFCC means: mfcc_1_mean to mfcc_20_mean
+
+20 MFCC variances: mfcc_1_var to mfcc_20_var
+
+These features are extracted using librosa and used for training both classical ML models and deep learning architectures.
+
 
 ## Models Trained  
 We experiment with and compare the performance of various models:
