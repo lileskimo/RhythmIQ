@@ -1,2 +1,93 @@
-# RhythmiQ-Music-Genre-Classification
-RhythmiQ is a deep learning-based music genre classification project that leverages CNN and LSTM + SVM models to achieve high accuracy. Using the GTZAN audio dataset, we extract MFCC (Mel-frequency Cepstral Coefficients) features from 3-second audio clips, creating a dataset of 10,000 samples for training and evaluation.
+# RhythmiQ 🎵  
+*A Deep Learning-Based Music Genre Classifier*
+
+## Overview  
+**RhythmiQ** is a music genre classification project built on the GTZAN dataset. The goal is to accurately classify audio samples into one of ten distinct music genres using various machine learning and deep learning models. This project explores the use of traditional classifiers as well as advanced deep neural networks.
+
+## Dataset  
+We use the **GTZAN Genre Collection**, which consists of 10 genres:
+
+- Blues  
+- Classical  
+- Country  
+- Disco  
+- Hip hop  
+- Jazz  
+- Metal  
+- Pop  
+- Reggae  
+- Rock
+
+Each original audio file is 30 seconds long. To enhance data diversity and improve learning, we segment each audio file into 3-second clips. After preprocessing, the dataset contains:
+
+- **10 genres**  
+- **1000 samples per genre**  
+- **Total: 10,000 audio clips**  
+- Features: **Mel Spectrograms**
+
+## Feature Extraction  
+- Audio is downsampled and segmented to 3-second clips.  
+- **Mel Spectrograms** are extracted from each clip using `librosa`.  
+- These are used as input features for model training.
+
+## Models Trained  
+We experiment with and compare the performance of various models:
+
+1. **Support Vector Machine (SVM)**  
+2. **Long Short-Term Memory (LSTM)**  
+3. **LSTM + SVM Hybrid**  
+4. **Convolutional Neural Network (CNN)**  
+5. **Residual-Gated CNN (Res-Gated CNN)**
+
+Each model is trained and evaluated using the same dataset to ensure a fair comparison.
+
+## Repository Structure  
+```
+RhythmiQ/
+│
+├── data/                   # Audio files and extracted features
+├── models/                 # Saved model weights and architectures
+├── notebooks/              # Jupyter notebooks for experimentation
+├── utils/                  # Helper scripts for preprocessing, training, etc.
+├── results/                # Visualizations and performance reports
+├── README.md               # This file
+└── requirements.txt        # Dependencies
+```
+
+## Getting Started
+
+### Dependencies
+Install required packages:
+```bash
+pip install -r requirements.txt
+```
+
+### Running the Code
+1. Extract mel spectrograms from audio:
+   ```bash
+   python utils/preprocess.py
+   ```
+2. Train a model (e.g., CNN):
+   ```bash
+   python models/train_cnn.py
+   ```
+3. Evaluate:
+   ```bash
+   python models/evaluate.py
+   ```
+
+## Results  
+Detailed performance reports (accuracy, loss, confusion matrices) for all models will be available in the `results/` folder.  
+
+*Model summaries and benchmarks will be updated soon.*
+
+## Future Work  
+- Experimenting with Transformer-based models.  
+- Improving accuracy of Res-Gated CNN Model. 
+- Real-time genre prediction app using Streamlit.
+
+## Contributors  
+- Anshit Agarwal  
+- Kaustubh Salodkar
+
+---
