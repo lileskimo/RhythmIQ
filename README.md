@@ -25,7 +25,7 @@ Each original audio file is 30 seconds long. To enhance data diversity and impro
 - **Total: 10,000 audio clips**  
 - Features: **Mel Spectrograms**
 
-### Extracted Features (Total: 55)
+## Extracted Features (Total: 55)
 
 | Category                     | Feature Names                         |
 |-----------------------------|----------------------------------------|
@@ -52,6 +52,17 @@ We experiment with and compare the performance of various models:
 5. **Residual-Gated CNN (Res-Gated CNN)**
 
 Each model is trained and evaluated using the same dataset to ensure a fair comparison.
+
+## Model Performance (Test Accuracy)
+
+| Model                      | Test Accuracy |
+|---------------------------|---------------|
+| Convolutional Neural Network (**CNN**)         | **86.44%**      |
+| Residual-Gated CNN (**Res-Gated CNN**)         | **84.18%**      |
+| Support Vector Machine (**SVM**)               | **77.00%**      |
+| Long Short-Term Memory (**LSTM**)              | **75.00%**      |
+| LSTM + SVM Ensemble                            | **75.00%**      |
+
 
 ## Repository Structure  
 ```
@@ -88,10 +99,6 @@ pip install -r requirements.txt
    python models/evaluate.py
    ```
 
-## Results  
-Detailed performance reports (accuracy, loss, confusion matrices) for all models will be available in the `results/` folder.  
-
-*Model summaries and benchmarks will be updated soon.*
 
 ## Future Work  
 - Experimenting with Transformer-based models.  
